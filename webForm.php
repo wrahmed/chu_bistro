@@ -6,7 +6,6 @@ include("utils/logging.php");
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
   if (isset($_POST["fname"]) && !empty($_POST["fname"])) {
-    console_log("hello php");
     $db = new DBController();
     $reservation = new Reservation($db);
     $reservation->setData($_POST);
@@ -22,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <html lang="en">
 
 <head>
-  <title>David Chu : Book a table </title>
+  <title>Lara FOOD : Book a table </title>
   <!-- Meta tags -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
