@@ -11,7 +11,7 @@ class DBController
   private $host = "containers-us-west-179.railway.app";
   private $port = "7529";
   private $username = "root";
-  private $password = "PASSWORD";
+  private $password = "G1KzavgCxjRWDMvStMGc";
   private $database = "railway";
 
   public $con = null;

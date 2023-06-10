@@ -30,8 +30,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   <meta name="keywords" content="Table Booking Form Responsive Widget, Audio and Video players, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design">
   <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
   <link href="webStyle.css" rel="stylesheet">
-  <script src="js/sweetalert.js"></script>
-
+  <!-- <script src="js/sweetalert.js"></script> -->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
@@ -103,7 +103,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   </div>
 
 </body>
-<script src="js/jquery-3.7.0.js"></script>
+<!-- <script src="js/jquery-3.7.0.js"></script> -->
+<script ref="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 <script>
   document.getElementById("form").addEventListener("click", (event) => event.preventDefault());
 
