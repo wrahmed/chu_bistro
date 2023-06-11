@@ -4,7 +4,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $_SESSION['cart'] = $_POST;
 }
 
-print_r($_SESSION['cart']);
+// print_r($_SESSION['cart']);
 
 ?>
 <html>
@@ -43,7 +43,14 @@ print_r($_SESSION['cart']);
                   <div class="d-flex justify-content-between align-items-center mb-4">
                     <div>
                       <p class="mb-1">Shopping cart</p>
-                      <p class="mb-0">You have 4 items in your cart</p>
+                      <?php
+                      if (!isset($_SESSION['cart']) || count($_SESSION['cart']) == 0) {
+                        echo "<p class='mb-0'>Your cart is empty</p>";
+                      } else {
+                        $len = count($_SESSION['cart']);
+                        echo "<p class='mb-0'>You have $len items in your cart</p>";
+                      }
+                      ?>
                     </div>
                     <div>
                       <p class="mb-0">
@@ -54,9 +61,20 @@ print_r($_SESSION['cart']);
                   </div>
                   <!-- Shopping cards here -->
                   <?php
-                  foreach ($_SESSION['cart'] as $key => $value) {
+                  include("utils/db_controller.php");
+                  include("utils/plate.php");
+                  include("utils/html_template.php");
+                  $cartTotal = 0;
+                  foreach ($_SESSION['cart'] as $shortName => $quantity) {
+                    $db = new DBController();
+                    $plate = new Plate($db);
+                    $plate->fetchData($shortName);
+                    $cartTotal += $plate->price_large * $quantity;
+                    $cartTotalAfter = $cartTotal + 20;
                     $replace = array('{{itemImageUrl}}', '{{itemTitle}}', '{{itemDesc}}', '{{itemPrice}}', '{{itemQuantity}}');
-                    $with = array($value['itemImageUrl'], $value['itemTitle'], $value['itemDesc'], $value['itemPrice'], $value['itemQuantity']);
+                    $with = array($plate->imageUrl, $plate->name, $plate->description, $plate->price_large, $quantity);
+                    $cardHtml = replaceTemplate($replace, $with, "card.html");
+                    echo $cardHtml;
                   }
                   ?>
                 </div>
@@ -105,22 +123,23 @@ print_r($_SESSION['cart']);
 
                       <div class="d-flex justify-content-between">
                         <p class="mb-2">Subtotal</p>
-                        <p class="mb-2">$4798.00</p>
+                        <?php echo "<p class='mb-2'>$cartTotal Dh</p>" ?>
                       </div>
 
                       <div class="d-flex justify-content-between">
                         <p class="mb-2">Shipping</p>
-                        <p class="mb-2">$20.00</p>
+                        <p class="mb-2">20 Dh</p>
                       </div>
 
                       <div class="d-flex justify-content-between mb-4">
                         <p class="mb-2">Total(Incl. taxes)</p>
-                        <p class="mb-2">$4818.00</p>
+                        <?php echo "<p class='mb-2'>$cartTotalAfter Dh</p>" ?>
+
                       </div>
 
                       <button type="button" class="btn btn-info btn-block btn-lg">
                         <div class="d-flex justify-content-between">
-                          <span>$4818.00</span>
+
                           <span>Checkout
                             <i class="fas fa-long-arrow-alt-right ms-2"></i></span>
                         </div>

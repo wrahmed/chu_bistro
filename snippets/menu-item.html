@@ -3,8 +3,12 @@
     <div class="col-sm-5">
       <div class="menu-item-photo">
         <div>{{short_name}}</div>
-        <button onclick="addToCart('{{short_name}}')">add</button>
-        <button onclick="removeFromCart('{{short_name}}')">remove</button>
+        <button onclick="addToCart('{{short_name}}')" class="bg-primary">
+          +
+        </button>
+        <button onclick="removeFromCart('{{short_name}}')" class="bg-primary">
+          -
+        </button>
         <img
           class="img-responsive"
           width="250"
