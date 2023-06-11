@@ -1,9 +1,12 @@
 <?php
-function console_log($output, $with_script_tags = true)
+class console
 {
-  $js_code = 'console.log(' . json_encode($output, JSON_HEX_TAG) . ');';
-  if ($with_script_tags) {
-    $js_code = '<script>' . $js_code . '</script>';
+  public static function log($string, $with_script_tags = true)
+  {
+    $js_code = 'console.log(' . json_encode($string, JSON_HEX_TAG) . ');';
+    if ($with_script_tags) {
+      $js_code = '<script>' . $js_code . '</script>';
+    }
+    echo $js_code;
   }
-  echo $js_code;
 }

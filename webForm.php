@@ -3,18 +3,15 @@ include("utils/db_controller.php");
 include("utils/reservation.php");
 include("utils/logging.php");
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-
-  if (isset($_POST["fname"]) && !empty($_POST["fname"])) {
-    $db = new DBController();
-    $reservation = new Reservation($db);
-    $reservation->setData($_POST);
-    $reservation->insertReservation();
-    console_log("sending data $_PATH");
-    // Redirection après l'insertion des données
-    header("Location: index.html");
-    exit(); // Terminer le script après la redirection
-  }
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  $db = new DBController();
+  $reservation = new Reservation($db);
+  $reservation->setData($_POST);
+  $reservation->insertReservation();
+  console::log("sending data $_PATH");
+  // Redirection après l'insertion des données
+  header("Location: index.html");
+  exit(); // Terminer le script après la redirection
 }
 ?>
 <!DOCTYPE html>
