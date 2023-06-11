@@ -2,30 +2,30 @@
 <html lang="en">
   <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
       integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous"/>
     <script src="js/ajax-utils.js"></script>
     <script src="js/script.js"></script>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>LARA FOOD</title>
-    <link rel="stylesheet" href="css/styles.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Oxygen:400,300,700"
       rel="stylesheet"
-      type="text/css"
-    />
+      type="text/css" />
     <link
       href="https://fonts.googleapis.com/css?family=Lora"
       rel="stylesheet"
-      type="text/css"
-    />
+      type="text/css"/>   
+      <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/test.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    
   </head>
   <body>
     <header>
@@ -65,7 +65,7 @@
                 >
               </li>
               <li id="navMenuButton">
-                <a href="#" onclick="$dc.loadMenuCategories();">
+                <a href="index.html" onclick="$dc.loadMenuCategories();">
                   <span class="glyphicon glyphicon-cutlery"></span
                   ><br class="hidden-xs" />
                   Menu</a
@@ -79,7 +79,7 @@
                 </a>
               </li>
               <li>
-                <a href="./contact-us.html">
+                <a href="./snippets/contact-us.html">
                   <span class="glyphicon glyphicon-info-sign"></span
                   ><br class="hidden-xs" />
                   Contact us
@@ -109,42 +109,46 @@
     </div>
     <div id="xs-deliver" class="text-center visible-xs">We Deliver</div>
 
-    <div id="main-content" class="container"></div>
+<div class="wrapper centered">
+  <article class="letter">
+    <div class="side" >
+      <h1>Contact us</h1><br>
+      <form id="form">
+      <p>
+        <textarea placeholder="Your message" id="message"></textarea>
+      </p>
+    </div>
+    <div class="side">
+      <p >
+        <input type="text" id="name" placeholder="Your name" required>
+      </p>
+      <p>
+        <input type="email" id="mail" placeholder="Your email" required>
+      </p>
+      <p>
+        <button name="btnSubmit" onclick="SwAlert()" type="submit">Send</button>
+      </p>
+    </form>
+    </div>
+  </article>
+  <div class="envelope front"></div>
+  <div class="envelope back"></div>
+<p class="result-message centered">Thank you !</p>
+    </div>
+    <script ref="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script>
+  document.getElementById("form").addEventListener("click", (event) => event.preventDefault());
+  function SwAlert() {
+    swal({
+      icon: 'success',
+      title: 'Table Booked !',
+      texte: 'Welcome',
+    }).then((value) => {
+      console.log("notif");
+      document.getElementById("form").submit();
+    });
+  }
+</script>
 
-    <footer class="panel-footer">
-      <div class="container">
-        <div class="row">
-          <section id="hours" class="col-sm-4">
-            <span>Hours :</span><br />
-            Mon - Sun (Except Friday) : 11:00m - 11:00pm<br />
-            Friday : 3:00pm - 11:00<br />
-            <hr class="visible-xs" />
-          </section>
-          <section id="address" class="col-sm-4">
-            <span>Address:</span><br />
-            20670, Avenue Nil<br />
-            150 Avenue Nil, Casablanca
-            <p>
-              * We offer free delivery in this area, with minimum order of
-              150DH.
-            </p>
-            <hr class="visible-xs" />
-          </section>
-          <section id="testimonials" class="col-sm-4">
-            <p>
-              "Impeccable service Good sophisticated Chinese food that differs
-              totally from the good various Indian vegetarian!"
-            </p>
-            <p>
-              "The food was excellent, the service was exceptional and
-              everything was very managed ."
-            </p>
-          </section>
-        </div>
-        <div class="text-center">&copy; Copyright LARA FOOD 2023</div>
-      </div>
-    </footer>
-
-    <!-- jQuery (Bootstrap JS plugins depend on it) -->
   </body>
 </html>
