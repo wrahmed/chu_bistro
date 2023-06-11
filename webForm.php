@@ -1,4 +1,7 @@
 <?php
+// include('components/header.php');
+// include('components/navbar.php');
+
 include("utils/db_controller.php");
 include("utils/reservation.php");
 include("utils/logging.php");
@@ -8,9 +11,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $reservation = new Reservation($db);
   $reservation->setData($_POST);
   $reservation->insertReservation();
-  console::log("sending data $_PATH");
+  console::log("sending data $_POST");
   // Redirection après l'insertion des données
-  header("Location: index.html");
+  header("Location: index.php");
   exit(); // Terminer le script après la redirection
 }
 ?>
@@ -26,7 +29,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <meta name="keywords" content="Table Booking Form Responsive Widget, Audio and Video players, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design">
   <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
   <link href="webStyle.css" rel="stylesheet">
-  <!-- <script src="js/sweetalert.js"></script> -->
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
@@ -35,7 +37,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <span class="fa title-open-right-sidebar tooltipstered fa-angle-double-right"></span>
   </div>
   <h1 class="header-w3ls">
-    Table Booking Form</h1>
+    Table Booking Form
+  </h1>
   <!---728x90--->
 
   <div class="appointment-w3">
@@ -115,5 +118,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     });
   }
 </script>
+
 
 </html>
