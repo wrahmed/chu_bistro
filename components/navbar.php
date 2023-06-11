@@ -25,7 +25,7 @@
         <ul id="nav-list" class="nav navbar-nav navbar-right">
           <li id="navHomeButton" class="visible-xs active">
             <a href="index.php">
-              <span class="glyphicon glyphicon-home"></span> Home
+              <span class="glyphicon glyphicon-shopping-cart"></span> Home
             </a>
           </li>
           <li id="navMenuButton">
@@ -37,8 +37,14 @@
           </li>
           <li>
             <a href="webForm.php">
-              <span class="glyphicon glyphicon glyphicon-user"></span><br class="hidden-xs" />
+              <span class="glyphicon glyphicon-user"></span><br class="hidden-xs" />
               Reservation
+            </a>
+          </li>
+          <li>
+            <a href="cart.php" type="submit">
+              <span class="glyphicon glyphicon-shopping-cart"></span><br class="hidden-xs" />
+              Cart
             </a>
           </li>
           <li>
@@ -60,3 +66,10 @@
     <!-- .container -->
   </nav>
 </header>
+<div id="call-btn" class="visible-xs">
+  <a class="btn" href="tel:+(212)701 23 32 72">
+    <span class="glyphicon glyphicon-earphone"></span>
+    +(212)701 23 32 72
+  </a>
+</div>
+<div id="xs-deliver" class="text-center visible-xs">We Deliver</div>
