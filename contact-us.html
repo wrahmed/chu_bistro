@@ -126,29 +126,13 @@
         <input type="email" id="mail" placeholder="Your email" required>
       </p>
       <p>
-        <button name="btnSubmit" onclick="SwAlert()" type="submit">Send</button>
+        <button type="submit">Send</button>      
       </p>
     </form>
     </div>
   </article>
   <div class="envelope front"></div>
   <div class="envelope back"></div>
-<p class="result-message centered">Thank you !</p>
     </div>
-    <script ref="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-<script>
-  document.getElementById("form").addEventListener("click", (event) => event.preventDefault());
-  function SwAlert() {
-    swal({
-      icon: 'success',
-      title: 'Table Booked !',
-      texte: 'Welcome',
-    }).then((value) => {
-      console.log("notif");
-      document.getElementById("form").submit();
-    });
-  }
-</script>
-
   </body>
 </html>
