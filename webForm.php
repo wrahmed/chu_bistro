@@ -36,7 +36,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <body>
 
-<?php include('components/navbar.php'); ?>
+
+  <?php include('components/navbar.php'); ?>
   <div class="pull-right toggle-right-sidebar">
     <span class="fa title-open-right-sidebar tooltipstered fa-angle-double-right"></span>
   </div>
