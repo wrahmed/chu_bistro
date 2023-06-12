@@ -22,24 +22,21 @@
       rel="stylesheet"
       type="text/css"/>   
       <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/test.css" />
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-    
+      <link rel="stylesheet" href="css/test.css" />    
   </head>
   <body>
     <header>
       <nav id="header-nav" class="navbar navbar-default">
         <div class="container">
           <div class="navbar-header">
-            <a href="index.html" class="pull-left visible-md visible-lg">
+            <a href="index.php" class="pull-left visible-md visible-lg">
               <div alt="Logo image">
-                <img id="logo-img" src="images/logo2.png" alt="logo" />
+                <img id="logo-img" src="images/logo2.png" alt="logo"/>
               </div>
             </a>
 
             <div class="navbar-brand">
-              <a href="index.html"><h1>LARA CHANG FOOD</h1></a>
+              <a href="index.php"><h1>LARA CHANG FOOD</h1></a>
             </div>
 
             <button
@@ -60,26 +57,31 @@
           <div id="collapsable-nav" class="collapse navbar-collapse">
             <ul id="nav-list" class="nav navbar-nav navbar-right">
               <li id="navHomeButton" class="visible-xs active">
-                <a href="index.html">
-                  <span class="glyphicon glyphicon-home"></span> Home</a
-                >
+                <a href="index.php">
+                  <span class="glyphicon glyphicon-home"></span> Home</a>
               </li>
               <li id="navMenuButton">
-                <a href="index.html" onclick="$dc.loadMenuCategories();">
-                  <span class="glyphicon glyphicon-cutlery"></span
-                  ><br class="hidden-xs" />
+                <a href="index.php" onclick="$dc.loadMenuCategories();">
+                  <span class="glyphicon glyphicon-cutlery"></span>
+                  <br class="hidden-xs" />
                   Menu</a
                 >
               </li>
               <li>
                 <a href="webForm.php">
                   <span class="glyphicon glyphicon glyphicon-user"></span
-                  ><br class="hidden-xs" />
+                  ><br class="hidden-xs"/>
                   Reservation
                 </a>
               </li>
               <li>
-                <a href="./snippets/contact-us.html">
+            <a href="cart.php" type="submit">
+              <span class="glyphicon glyphicon-shopping-cart"></span><br class="hidden-xs" />
+              Cart
+            </a>
+          </li>
+              <li>
+                <a href="contact-us.php">
                   <span class="glyphicon glyphicon-info-sign"></span
                   ><br class="hidden-xs" />
                   Contact us
@@ -126,29 +128,13 @@
         <input type="email" id="mail" placeholder="Your email" required>
       </p>
       <p>
-        <button name="btnSubmit" onclick="SwAlert()" type="submit">Send</button>
+        <button type="submit">Send</button>      
       </p>
     </form>
     </div>
   </article>
   <div class="envelope front"></div>
   <div class="envelope back"></div>
-<p class="result-message centered">Thank you !</p>
     </div>
-    <script ref="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-<script>
-  document.getElementById("form").addEventListener("click", (event) => event.preventDefault());
-  function SwAlert() {
-    swal({
-      icon: 'success',
-      title: 'Table Booked !',
-      texte: 'Welcome',
-    }).then((value) => {
-      console.log("notif");
-      document.getElementById("form").submit();
-    });
-  }
-</script>
-
   </body>
 </html>
