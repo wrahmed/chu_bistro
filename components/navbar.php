@@ -28,7 +28,7 @@
             </a>
           </li>
           <li id="navMenuButton">
-            <a href="index.php#" onclick="$dc.loadMenuCategories();">
+            <a href="index.php#" onclick="$dc.loadMenuCategories()">
               <span class="glyphicon glyphicon-cutlery"></span>
               <br class="hidden-xs" />
               Menu
