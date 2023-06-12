@@ -28,6 +28,6 @@
         </p>
       </section>
     </div>
-    <div class="text-center">&copy; Copyright ARAL FOOD 2023</div>
+    <div class="text-center">&copy; Copyright LARA FOOD 2023</div>
   </div>
 </footer>
