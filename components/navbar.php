@@ -9,7 +9,7 @@
 
         <div class="navbar-brand">
           <a href="index.php">
-            <h1>LARA FOOD</h1>
+            <h1>LARA CHANG FOOD</h1>
           </a>
         </div>
 
