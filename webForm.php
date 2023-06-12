@@ -11,7 +11,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $reservation = new Reservation($db);
   $reservation->setData($_POST);
   $reservation->insertReservation();
-  console::log("sending data $_POST");
   // Redirection après l'insertion des données
   header("Location: index.php");
   exit(); // Terminer le script après la redirection
@@ -20,24 +19,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <!DOCTYPE html>
 <html lang="en">
 
+<?php include('components/head.php'); ?>
+
 <head>
   <title>Lara CHANG FOOD : Book a table </title>
-  <?php include('components/head.php'); ?>
   <!-- Meta tags -->
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="robots" content="noindex">
-  <meta name="keywords" content="Table Booking Form Responsive Widget, Audio and Video players, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design">
-  <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
   <link href="webStyle.css" rel="stylesheet">
-  <link rel="stylesheet" href="./css/styles.css">
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
-
-
   <?php include('components/navbar.php'); ?>
+
   <div class="pull-right toggle-right-sidebar">
     <span class="fa title-open-right-sidebar tooltipstered fa-angle-double-right"></span>
   </div>

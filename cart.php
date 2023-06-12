@@ -3,20 +3,10 @@ session_start();
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $_SESSION['cart'] = $_POST;
 }
-
-// print_r($_SESSION['cart']);
-
 ?>
 <html>
 
-<body>
-
-  <?php
-  // include("components/head.php");
-  // include("components/navbar.php");
-  ?>
-
-
+<body style="background-color: #61122f">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
   <style>
     @media (min-width: 1025px) {
@@ -25,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       }
     }
   </style>
-  <section class="h-100 h-custom" style="background-color: #61122f">
+  <section class="h-100 h-custom">
     <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col">
@@ -78,12 +68,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                   ?>
                 </div>
                 <div class="col-lg-5">
-                  <div class="card bg-primary text-white rounded-3">
+                  <!-- #f6b319 -->
+                  <div class="card text-white rounded-3" style="background-color:#61122f">
                     <form id="form" action="order.php" method="POST" class="mt-4">
                       <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center mb-4">
                           <h5 class="mb-0">Card details</h5>
-                          <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-6.webp" class="img-fluid rounded-3" style="width: 45px" alt="Avatar" />
                         </div>
 
                         <!-- <p class="small mb-2">Card type</p>

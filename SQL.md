@@ -7,15 +7,3 @@ CREATE TABLE orders_creditCard (orderId int NOT NULL, creditCardId int NOT NULL,
 CREATE TABLE creditCard (creditCardId int NOT NULL AUTO_INCREMENT, cardNumber VARCHAR(19) NOT NULL, exp VARCHAR(7) NOT NULL,cvv VARCHAR(3) NOT NULL, PRIMARY KEY(creditCardId));
 
 SET FOREIGN_KEY_CHECKS = 1;
-
-MySQL [bcjbhbivptnsxz8jlkn3]> desc plate;
-+-------------+--------------+------+-----+---------+----------------+
-| Field | Type | Null | Key | Default | Extra |
-+-------------+--------------+------+-----+---------+----------------+
-| dishId | int | NO | PRI | NULL | auto_increment |
-| categoryId | int | NO | MUL | NULL | |
-| name | varchar(100) | NO | | NULL | |
-| short_name | varchar(5) | NO | | NULL | |
-| price_large | float | NO | | NULL | |
-| description | varchar(255) | NO | | | |
-+-------------+--------------+------+-----+---------+----------------+
