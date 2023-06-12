@@ -2,9 +2,8 @@
   <nav id="header-nav" class="navbar navbar-default">
     <div class="container">
       <div class="navbar-header">
-        <!-- <img id="logo-img" src="restaurant-logo.png" alt="logo" /> -->
         <a href="index.php" class="pull-left visible-md visible-lg">
-          <img id="logo-img" src="restaurant-logo.png" alt="logo" />
+          <img id="logo-img" src="images/logo2.png" alt="logo" />
         </a>
 
         <div class="navbar-brand">
@@ -48,7 +47,7 @@
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="./contact-us.html">
               <span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs" />
               Contact us
             </a>
