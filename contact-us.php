@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
 <?php include('components/head.php'); ?>
-
+</head>
 <body>
   <?php include('components/navbar.php'); ?>
   <link rel="stylesheet" href="css/test.css" />
