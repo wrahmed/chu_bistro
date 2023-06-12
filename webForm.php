@@ -22,6 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <head>
   <title>Lara CHANG FOOD : Book a table </title>
+  <?php include('components/head.php'); ?>
   <!-- Meta tags -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -29,16 +30,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <meta name="keywords" content="Table Booking Form Responsive Widget, Audio and Video players, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design">
   <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
   <link href="webStyle.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
-  <nav class="navbar navbar-light bg-light" style="padding:20px">
-    <a class="navbar-brand" href="index.php">
-      <img src="logo2.png" width="70" height="70" class="d-inline-block align-top" alt="">
-    </a>
-  </nav>
 
+
+  <?php include('components/navbar.php'); ?>
   <div class="pull-right toggle-right-sidebar">
     <span class="fa title-open-right-sidebar tooltipstered fa-angle-double-right"></span>
   </div>
@@ -46,7 +45,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     Table Booking Form
   </h1>
   <!---728x90--->
-
   <div class="appointment-w3">
     <form id="form" method="post">
       <div class="personal">
@@ -104,7 +102,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </form>
   </div>
   <div class="copy">
-    <p>&copy;2023 IAGI's. | All Rights Reserved |</p>
+    <p>&copy; Copyright LARA FOOD 2023 | All Rights Reserved |</p>
   </div>
 
 </body>

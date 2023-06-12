@@ -47,7 +47,7 @@
             </a>
           </li>
           <li>
-            <a href="./contact-us.html">
+            <a href="./contact-us.php">
               <span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs" />
               Contact us
             </a>
