@@ -64,14 +64,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                   include("utils/db_controller.php");
                   include("utils/plate.php");
                   include("utils/html_template.php");
-                  $cartTotal = 0;
-                  foreach ($_SESSION['cart'] as $shortName => $quantity) {
-                    $db = new DBController();
-                    $plate = new Plate($db);
-                    $plate->fetchData($shortName);
-                    $cartTotal += $plate->price_large * $quantity;
-                    $cartTotalAfter = $cartTotal + 20;
-                    $replace = array('{{itemImageUrl}}', '{{itemTitle}}', '{{itemDesc}}', '{{itemPrice}}', '{{itemQuantity}}');
+                  include("utils/cart.php");
+                  $db = new DBController();
+                  $cart = new Cart($db);
+                  $replace = array('{{itemImageUrl}}', '{{itemTitle}}', '{{itemDesc}}', '{{itemPrice}}', '{{itemQuantity}}');
+                  foreach ($cart->cartItems as $cartItem) {
+                    $plate = $cartItem->plate;
+                    $quantity = $cartItem->quantity;
                     $with = array($plate->imageUrl, $plate->name, $plate->description, $plate->price_large, $quantity);
                     $cardHtml = replaceTemplate($replace, $with, "card.html");
                     echo $cardHtml;
