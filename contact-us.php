@@ -12,7 +12,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>LARA FOOD</title>
+    <title>LARA CHANG FOOD</title>
     <link
       href="https://fonts.googleapis.com/css?family=Oxygen:400,300,700"
       rel="stylesheet"
