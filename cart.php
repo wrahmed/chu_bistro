@@ -61,17 +61,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                   <!-- Shopping cards here -->
                   <?php
                   include("utils/db_controller.php");
-                  include("utils/plate.php");
+                  include("utils/menuItem.php");
                   include("utils/html_template.php");
                   include("utils/cart.php");
                   $db = new DBController();
                   $cart = new Cart($db);
                   $replace = array('{{itemImageUrl}}', '{{itemTitle}}', '{{itemDesc}}', '{{itemPrice}}', '{{itemQuantity}}');
                   foreach ($cart->cartItems as $cartItem) {
-                    $plate = $cartItem->plate;
+                    $menuItem = $cartItem->menuItem;
                     $quantity = $cartItem->quantity;
-                    $with = array($plate->imageUrl, $plate->name, $plate->description, $plate->price_large, $quantity);
-                    $cardHtml = replaceTemplate($replace, $with, "card.html");
+                    $with = array($menuItem->imageUrl, $menuItem->name, $menuItem->description, $menuItem->price_large, $quantity);
+                    $cardHtml = replaceTemplate($replace, $with, "snippets/card.html");
                     echo $cardHtml;
                   }
                   $db->closeConnection();

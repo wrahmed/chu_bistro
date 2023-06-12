@@ -37,9 +37,9 @@ class Order
     $orderId = $this->db->con->insert_id;
 
     foreach ($this->cart->cartItems as $cartItem) {
-      $plateId = $cartItem->plate->plateId;
+      $menuItemId = $cartItem->menuItem->menuItemId;
       $quantity = $cartItem->quantity;
-      $this->db->con->query("INSERT INTO orders_plate (orderId, plateId, quantity) VALUES ($orderId, $plateId, $quantity)");
+      $this->db->con->query("INSERT INTO orders_menuItem (orderId, menuItemId, quantity) VALUES ($orderId, $menuItemId, $quantity)");
     }
   }
 }
