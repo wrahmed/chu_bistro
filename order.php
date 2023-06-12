@@ -4,8 +4,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   require_once('utils/db_controller.php');
   require_once('utils/cart.php');
   require_once('utils/order.php');
-  require_once('utils/plate.php');
-  require_once('utils/logging.php');
 
   $db = new DBController();
   $cart = new Cart($db); # uses session automatically

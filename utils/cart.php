@@ -1,5 +1,5 @@
 <?php
-
+require_once('plate.php');
 class CartItem
 {
   public $plate = null;

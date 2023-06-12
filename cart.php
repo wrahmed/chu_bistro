@@ -113,8 +113,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </div>
 
                         <div class="form-outline form-white mb-4">
-                          <input type="text" name="address" id="typeAddress" class="form-control form-control-lg" size="100" placeholder="Address" />
-                          <label class="form-label" for="typeAddress">Delivery Address</label>
+                          <input type="text" name="addr" id="typeAddr" class="form-control form-control-lg" size="100" placeholder="Address" />
+                          <label class="form-label" for="typeAddr">Delivery Address</label>
                         </div>
 
                         <div class="form-outline form-white mb-4">
