@@ -173,7 +173,7 @@ ul{
 }
 /*-- //Reset-Code --*/
 body {
-    background: url("BookPic.jpg");
+    background: url("/images/BookPic.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     -webkit-background-size: cover;
