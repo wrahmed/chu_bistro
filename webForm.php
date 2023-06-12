@@ -33,11 +33,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 
 <body>
-<nav class="navbar navbar-light bg-light" style="padding:20px">
-  <a class="navbar-brand" href="index.php">
-    <img src="logo2.png" width="70" height="70" class="d-inline-block align-top" alt="">
-  </a>
-</nav>
+  <nav class="navbar navbar-light bg-light" style="padding:20px">
+    <a class="navbar-brand" href="index.php">
+      <img src="logo2.png" width="70" height="70" class="d-inline-block align-top" alt="">
+    </a>
+  </nav>
 
   <div class="pull-right toggle-right-sidebar">
     <span class="fa title-open-right-sidebar tooltipstered fa-angle-double-right"></span>

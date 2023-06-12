@@ -15,6 +15,7 @@ class CartItem
 class Cart
 {
   public $cartItems = array();
+  // public $clientEmail = "";
   public $cartTotal = 0;
   public $cartTotalAfter = 0;
   private $shippingFee = 20;
@@ -37,8 +38,12 @@ class Cart
     $this->cartTotalAfter = $this->cartTotal + $this->shippingFee;
   }
 
-  public function sendToDB()
+  public function clearCart()
   {
+    unset($_SESSION['cart']);
+    $this->cartItems = array();
+    $this->cartTotal = 0;
+    $this->cartTotalAfter = 0;
   }
 }
 
