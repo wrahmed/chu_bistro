@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <body>
 
-  <?php
+<?php
   // include("components/head.php");
   // include("components/navbar.php");
   include("cart.html");
