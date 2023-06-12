@@ -122,7 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                       <div class="d-flex justify-content-between">
                         <p class="mb-2">Subtotal</p>
-                        <?php echo "<p class='mb-2'>$cartTotal Dh</p>" ?>
+                        <?php echo "<p class='mb-2'>$cart->cartTotal Dh</p>" ?>
                       </div>
 
                       <div class="d-flex justify-content-between">
@@ -132,7 +132,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                       <div class="d-flex justify-content-between mb-4">
                         <p class="mb-2">Total(Incl. taxes)</p>
-                        <?php echo "<p class='mb-2'>$cartTotalAfter Dh</p>" ?>
+                        <?php echo "<p class='mb-2'>$cart->cartTotalAfter Dh</p>" ?>
 
                       </div>
 
