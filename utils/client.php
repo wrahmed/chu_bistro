@@ -2,10 +2,10 @@
 
 class Client
 {
-  protected $fname = null;
-  protected $lname = null;
-  protected $email = null;
-  protected $phone = null;
+  public $fname = null;
+  public $lname = null;
+  public $email = null;
+  public $phone = null;
 
   public $db = null;
   public $clientId = null;

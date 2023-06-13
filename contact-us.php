@@ -1,39 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
 <?php include('components/head.php'); ?>
-</head>
+<link rel="stylesheet" href="css/styles.css" />
+<link rel="stylesheet" href="css/test.css" />
+
 <body>
   <?php include('components/navbar.php'); ?>
-  <link rel="stylesheet" href="css/test.css" />
+
   <div class="wrapper centered">
-    <article class="letter">
-      <div class="side">
-        <h1>Contact us</h1><br>
-        <form id="form">
+    <form method="post" action="message.php" id="form">
+      <article class="letter">
+        <div class="side">
+          <h1>Contact Us</h1><br>
           <p>
-            <textarea placeholder="Your message" id="message"></textarea>
+            <textarea placeholder="Your message" name="message" id="message"></textarea>
           </p>
-      </div>
-      <div class="side">
-        <p>
-          <input type="text" id="name" placeholder="Your name" required>
-        </p>
-        <p>
-          <input type="email" id="mail" placeholder="Your email" required>
-        </p>
-        <p>
-          <button name="btnSubmit" onclick="SwAlert()" type="submit">Send</button>
-        </p>
-        </form>
-      </div>
-    </article>
-    <div class="envelope front"></div>
-    <div class="envelope back"></div>
-    <p class="result-message centered">Thank you !</p>
+        </div>
+        <div class="side">
+          <p>
+            <input type="text" name="name" id="name" placeholder="Your name" required>
+          </p>
+          <p>
+            <input type="email" name="email" id="email" placeholder="Your email" required>
+          </p>
+          <p>
+            <button type="submit">Send</button>
+          </p>
+        </div>
+      </article>
+    </form>
+    <!-- <div class="envelope front"></div> -->
+    <!-- <div class="envelope back"></div> -->
   </div>
 
 </body>
-
 
 </html>
