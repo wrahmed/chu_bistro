@@ -23,6 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
   <title>Lara CHANG FOOD : Book a table </title>
   <?php include('components/head.php'); ?>
+  <?php include('components/head.php'); ?>
   <!-- Meta tags -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -35,7 +36,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 
 <body>
-<?php include('components/navbar.php'); ?>
+
+
+  <?php include('components/navbar.php'); ?>
   <div class="pull-right toggle-right-sidebar">
     <span class="fa title-open-right-sidebar tooltipstered fa-angle-double-right"></span>
   </div>
