@@ -23,8 +23,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <head>
   <title>Lara CHANG FOOD : Book a table </title>
+  <?php include('components/head.php'); ?>
   <!-- Meta tags -->
   <link href="webStyle.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 

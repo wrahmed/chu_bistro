@@ -125,6 +125,12 @@ nav.vertical ul li{	display:block;}/* vertical menu */
 nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
 img{max-width:100%;}
 /*end reset*/
+#dt
+{
+    color:#FFF;
+    background-color: #8E173B;
+    padding-left: 15%;
+}
 html,body{
 	padding:0;
 	margin:0;
@@ -218,8 +224,8 @@ letter-spacing:3px;
 .form-right-w3ls input[type="text"],
 .form-left-w3l input[type="email"]
 ,.form-control-w3l textarea[type="text"],
-.form-right-w3ls  input[type="date"],
-.form-left-w3l  input[type="date"]{
+.form-right-w3ls  input[type="datetime-local"],
+.form-left-w3l  input[type="datetime-local"]{
     -webkit-appearance: none;
     display: inline-block;
 
@@ -229,8 +235,8 @@ letter-spacing:3px;
  .form-right-w3ls input[type="text"],
  .form-left-w3l input[type="email"]
 ,.form-control-w3l textarea,
-.form-right-w3ls  input[type="date"],
-.form-left-w3l  input[type="date"]
+.form-right-w3ls  input[type="datetime-local"],
+.form-left-w3l  input[type="datetime-local"]
 .form-left-w3l  input[type="time"]
 
 {
@@ -364,7 +370,7 @@ input[type="submit"] {
 }
 @media(max-width:1024px){
 	select.form-control, .form-left-w3l input[type="text"], .form-right-w3ls input[type="text"], .form-left-w3l input[type="email"], .form-control-w3l textarea, 
-	.form-right-w3ls input[type="date"], .form-left-w3l input[type="date"] {
+	.form-right-w3ls input[type="datetime-local"], .form-left-w3l input[type="datetime-local"] {
     font-size: 14px;
 	}
 	.appointment-w3 {
@@ -386,8 +392,8 @@ input[type="submit"] {
 	}
   select.form-control, .form-left-w3l input[type="text"], 
   .form-right-w3ls input[type="text"], .form-left-w3l input[type="email"],
-  .form-control-w3l textarea, .form-right-w3ls input[type="date"],
-  .form-left-w3l input[type="date"] {
+  .form-control-w3l textarea, .form-right-w3ls input[type="datetime-local"],
+  .form-left-w3l input[type="datetime-local"] {
     padding: .6em 0;
 }
 select.form-control {
@@ -447,7 +453,7 @@ input[type="submit"] {
     font-size: 44px;
 }
 select.form-control, .form-left-w3l input[type="text"], .form-right-w3ls input[type="text"], .form-left-w3l input[type="email"], .form-control-w3l textarea, 
-.form-right-w3ls input[type="date"], .form-left-w3l input[type="date"] {
+.form-right-w3ls input[type="datetime-local"], .form-left-w3l input[type="datetime-local"] {
     letter-spacing: 1px;
 }
 .appointment-w3 {
@@ -458,7 +464,7 @@ select.form-control, .form-left-w3l input[type="text"], .form-right-w3ls input[t
 	h1.header-w3ls {
     letter-spacing: 2px;
 }
-select.form-control, .form-left-w3l input[type="text"], .form-right-w3ls input[type="text"], .form-left-w3l input[type="email"], .form-control-w3l textarea, .form-right-w3ls input[type="date"], .form-left-w3l input[type="date"] {
+select.form-control, .form-left-w3l input[type="text"], .form-right-w3ls input[type="text"], .form-left-w3l input[type="email"], .form-control-w3l textarea, .form-right-w3ls input[type="datetime-local"], .form-left-w3l input[type="datetime-local"] {
     font-size: 13px;
 }
 .copy p {
